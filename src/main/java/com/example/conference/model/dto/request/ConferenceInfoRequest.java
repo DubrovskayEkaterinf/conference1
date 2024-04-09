@@ -4,6 +4,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.SuperBuilder;
 
+
 @Getter
 @Setter
 @SuperBuilder
@@ -12,9 +13,9 @@ import lombok.experimental.SuperBuilder;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 
 public class ConferenceInfoRequest {
-    String NameConference;
-    String date;
-    String time;
+    String nameConference;
+    String dateEvent;
+    String timeEvent;
     String city;
     String street;
     Integer houseNumber;

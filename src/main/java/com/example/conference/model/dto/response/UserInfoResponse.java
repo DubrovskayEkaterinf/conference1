@@ -16,4 +16,8 @@ import lombok.experimental.SuperBuilder;
 
 public class UserInfoResponse extends UserInfoRequest {
     Long id;
-}
+
+
+
+  }
+

@@ -16,4 +16,5 @@ import lombok.experimental.SuperBuilder;
 
 public class ConferenceInfoResponse extends ConferenceInfoRequest {
     Long id;
+    UserInfoResponse user;
 }

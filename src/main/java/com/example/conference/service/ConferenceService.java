@@ -1,9 +1,10 @@
 package com.example.conference.service;
 
+import com.example.conference.model.db.entity.Conference;
 import com.example.conference.model.dto.request.ConferenceInfoRequest;
 import com.example.conference.model.dto.response.ConferenceInfoResponse;
-
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 
 public interface ConferenceService {
 
@@ -15,5 +16,14 @@ public interface ConferenceService {
 
     void deletConference(Long id);
 
-    List<ConferenceInfoResponse> getAllConference();
+    Page<ConferenceInfoResponse> getAllConferences(Integer page, Integer perPage, String sort, Sort.Direction order);
+
+
+    ConferenceInfoResponse linkConferenceAndParticipant(Long userId, Long conferenceId);
+
+    Conference getConferenceDb(Long Id);
+
+
+    Page<ConferenceInfoResponse> getConferenceUserId(Long id, Integer page, Integer perPage, String sort, Sort.Direction order);
+
 }
